@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.rajuuu.photo_user_admin">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/MyMaterialTheme4">
+        <activity android:name=".User.Home.ViewTrendStateActivity"></activity>
+        <activity android:name=".User.Home.ViewTrendIndiaActivity" />
+        <activity android:name=".User.Home.FilterActivity" />
+        <activity android:name=".ChangePassword.ChangePasswordActivity" />
+        <activity android:name=".User.ViewProduct.Gallery.FullScreenActivity" />
+        <activity android:name=".User.ViewProduct.Gallery.GalleryActivity" />
+        <activity android:name=".User.Wishlist.WishlistActivity" />
+        <activity android:name=".User.ViewProduct.ViewProductDetailsActivity" />
+        <activity android:name=".User.Category.AllCategoryActivity" />
+        <activity android:name=".User.Category.ViewSingleCatProductActivity" />
+        <activity android:name=".Login.ForgotPageActivity" />
+        <activity android:name=".Login.ForgotOTPActivity" />
+        <activity android:name=".Login.ForgotPasswordActivity" />
+        <activity android:name=".Login.RegisterActivity" />
+        <activity android:name=".Login.LoginActivity" />
+        <activity android:name=".User.UserMainActivity" />
+        <activity android:name=".Admin.AdminMainActivity" />
+        <activity android:name=".Splash.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+    </application>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+</manifest>

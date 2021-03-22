@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:background="@color/colorAccent"
+    android:layout_width="match_parent"
+    android:layout_marginTop="30dp"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    >
+
+    <!--for backgroud i have an image-->
+
+    <ImageView
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/logooo"
+        />
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/header_usrname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        android:layout_marginStart="30dp"
+        android:textStyle="bold"
+        android:padding="2dp"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:id="@+id/header_usrmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#FFFFFF"
+        android:padding="2dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        android:textSize="15sp"
+        />
+</LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#fff"
+    android:padding="0dip" >
+
+    <RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:padding="5dip" >
+
+    <!--  ListRow Left sied Thumbnail image -->
+    <LinearLayout
+        android:id="@+id/thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="3dip"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/image_bg"
+        android:layout_marginRight="5dip">
+
+        <ImageView
+            android:id="@+id/list_image"
+            android:layout_width="120dip"
+            android:layout_height="120dip"
+            android:src="@drawable/ic_launcher_background"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/thumbnail"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:layout_toLeftOf="@+id/arrowImg"
+        android:orientation="vertical">
+
+        <!-- Title Of Song-->
+        <TextView
+            android:id="@+id/titleTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#040404"
+            android:typeface="sans"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:textSize="17dip"
+            android:textStyle="bold"/>
+
+        <!-- Artist Name -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#343434"
+                android:textSize="14dip"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:text="Location : "
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/locationTxt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:textSize="12dip"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#343434"
+                android:textSize="14dip"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:text="Price : "
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/priceTxt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:textSize="12dip"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:text="" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rat_txt_bg">
+            <TextView
+                android:id="@+id/ratbarTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:textSize="13dp"
+                android:padding="4dp"
+                android:drawableLeft="@drawable/ic_baseline_star_rate_24"
+                android:drawablePadding="5dp"
+                android:text="5.0  " />
+
+        </LinearLayout>
+
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:visibility="visible"
+                android:layout_marginStart="5dp"
+                android:id="@+id/img_wishYes"
+                android:layout_width="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:src="@drawable/likeyes" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!-- Rightend Arrow -->
+    <ImageView
+        android:id="@+id/arrowImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"/>
+
+</RelativeLayout>
+
+
+</LinearLayout>
