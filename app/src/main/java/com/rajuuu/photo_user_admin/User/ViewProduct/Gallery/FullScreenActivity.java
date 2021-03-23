@@ -42,6 +42,7 @@ public class FullScreenActivity extends AppCompatActivity {
     private ViewPager viewPager;
     int position;
     String[] images;
+    String[] images1;
     private List<GImagesModel> categoryList = new ArrayList<>();
 
     ViewPager mViewPager;
@@ -86,6 +87,7 @@ if (position != 1000){
                 JSONObject jsonObject = new JSONObject(content);
                 JSONArray jsonArray =  jsonObject.getJSONArray("images");
                 images = new String[jsonArray.length()];
+                images1 = new String[jsonArray.length()+1];
                 for(int i =0;i<jsonArray.length(); i++){
                     JSONObject productObject = jsonArray.getJSONObject(i);
 
@@ -96,6 +98,8 @@ if (position != 1000){
 
                     Log.e("dddddddddddd",""+productObject.getString("image_src"));
                     images[i]=productObject.getString("image_src");
+
+                    images1[i+1]=images[i];
                 }
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -109,7 +113,8 @@ if (position != 1000){
 //
 //                // displaying selected image first
 //                viewPager.setCurrentItem(position);
-                ViewPagerAdapter mViewPagerAdapter = new ViewPagerAdapter(FullScreenActivity.this, images,position);
+                images1[0]=images[position];
+                ViewPagerAdapter mViewPagerAdapter = new ViewPagerAdapter(FullScreenActivity.this, images1,position);
 
                 // Adding the Adapter to the ViewPager
                 mViewPager.setAdapter(mViewPagerAdapter);

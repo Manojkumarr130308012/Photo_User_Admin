@@ -60,13 +60,7 @@ int a=0;
 
         // setting the image in the imageView
 //        imageView.setImageResource();
-        images[0]=images[this.postion];
-        for (int i=0;i<images.length;i++){
-            for (int j=1;j<i+1;j++){
-                images[i+1]=images[i];
-            }
 
-        }
 
         Glide.with(context).load(imageView).centerCrop().thumbnail(Glide.with(context).load(images[position])).into(imageView);
 
