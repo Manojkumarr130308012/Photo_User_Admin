@@ -214,7 +214,8 @@ public class GalleryActivity extends AppCompatActivity {
 
                     categoryList.add(new GImagesModel(
                             productObject.getString("image_id"),
-                            productObject.getString("image_src")
+                            productObject.getString("image_src"),
+                            productObject.getString("vid")
                     ));
 
                 }

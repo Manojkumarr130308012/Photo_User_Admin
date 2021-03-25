@@ -94,7 +94,7 @@ public class CustHomeFragment extends Fragment {
 
     //  Event ///
     RecyclerView recyclerViewEvent;
-    private List<ViewSingleCatProductModel> eventList = new ArrayList<>();
+    private List<ViewSingleCatProductModel> eventList;
     private WeddingAdapter mAdapterEvent;
     String eidd;
     TextView txt_viewllEvent;
@@ -181,8 +181,7 @@ public class CustHomeFragment extends Fragment {
         listState = new ArrayList<>();
         listStateId = new ArrayList<>();
 
-        listCity = new ArrayList<>();
-        listCityId = new ArrayList<>();
+
 
         if (!city_id.isEmpty()) {
             mainLay.setVisibility(View.VISIBLE);
@@ -762,7 +761,8 @@ public class CustHomeFragment extends Fragment {
             try {
                 JSONObject jsonObject = new JSONObject(content);
                 JSONArray jsonArray =  jsonObject.getJSONArray("vendor");
-
+                eventList = new ArrayList<>();
+                eventList.clear();
                 for(int i =0;i<jsonArray.length(); i++){
                     JSONObject productObject = jsonArray.getJSONObject(i);
 
@@ -1094,6 +1094,10 @@ public class CustHomeFragment extends Fragment {
             try {
                 JSONObject jsonObject = new JSONObject(content);
                 JSONArray jsonArray =  jsonObject.getJSONArray("location");
+
+
+                listCity = new ArrayList<>();
+                listCityId = new ArrayList<>();
 
                 for(int i =0;i<jsonArray.length(); i++){
                     JSONObject productObject = jsonArray.getJSONObject(i);

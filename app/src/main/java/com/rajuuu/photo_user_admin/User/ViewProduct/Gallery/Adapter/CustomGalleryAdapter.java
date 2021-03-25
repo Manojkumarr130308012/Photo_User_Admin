@@ -75,7 +75,7 @@ public class CustomGalleryAdapter extends RecyclerView.Adapter<CustomGalleryAdap
 //            }
 //        });
 //
-        holder.myImageView.setOnClickListener(new OnImageClickListener(position));
+        holder.myImageView.setOnClickListener(new OnImageClickListener(position,movie.getVidd()));
 
     }
 
@@ -83,10 +83,12 @@ public class CustomGalleryAdapter extends RecyclerView.Adapter<CustomGalleryAdap
     class OnImageClickListener implements View.OnClickListener {
 
         int _postion;
+        String _viddd;
 
         // constructor
-        public OnImageClickListener(int position) {
+        public OnImageClickListener(int position, String viddd) {
             this._postion = position;
+            this._viddd = viddd;
         }
 
         @Override
@@ -95,6 +97,7 @@ public class CustomGalleryAdapter extends RecyclerView.Adapter<CustomGalleryAdap
             // launch full screen activity
             Intent i = new Intent(_activity, FullScreenActivity.class);
             i.putExtra("position", _postion);
+            i.putExtra("vidd", _viddd);
             _activity.startActivity(i);
         }
 

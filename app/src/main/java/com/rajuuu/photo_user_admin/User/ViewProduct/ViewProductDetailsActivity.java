@@ -192,7 +192,7 @@ public class ViewProductDetailsActivity extends AppCompatActivity {
         galleryBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(ViewProductDetailsActivity.this, ""+vendor_id, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(ViewProductDetailsActivity.this, ""+vendor_id, Toast.LENGTH_SHORT).show();
                 Intent intent1 = new Intent(ViewProductDetailsActivity.this, GalleryActivity.class);
                 intent1.putExtra("vidd",vendor_id);
                 startActivity(intent1);

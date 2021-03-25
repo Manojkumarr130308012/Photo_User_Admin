@@ -43,6 +43,7 @@ public class FullScreenActivity extends AppCompatActivity {
     int position;
     String[] images;
     String[] images1;
+    String vidd;
     private List<GImagesModel> categoryList = new ArrayList<>();
 
     ViewPager mViewPager;
@@ -55,13 +56,14 @@ public class FullScreenActivity extends AppCompatActivity {
 
         Intent i = getIntent();
         position = i.getIntExtra("position", 1000);
+        vidd = i.getStringExtra("vidd");
         Toast.makeText(this, ""+position, Toast.LENGTH_SHORT).show();
         mViewPager = (ViewPager)findViewById(R.id.viewPagerMain);
 if (position != 1000){
     this.runOnUiThread(new Runnable() {
         @Override
         public void run() {
-            new ReadJSON().execute(Constant.API_VENDOR_IMAGES+"41");
+            new ReadJSON().execute(Constant.API_VENDOR_IMAGES+vidd);
         }
     });
 }
